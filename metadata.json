@@ -1,0 +1,7 @@
+{
+  "name": "Himalaya Hybrid Seeds Catalog",
+  "description": "Premium digital crop catalog for Himalaya Hybrid Seeds, featuring expert AI-powered product insights.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
