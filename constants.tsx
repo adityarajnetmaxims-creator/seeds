@@ -1,5 +1,4 @@
-
-import { Category, Language, TranslationStrings } from './types';
+import { Category, Language, TranslationStrings } from './types.ts';
 
 export interface GuideSection {
   title: string;

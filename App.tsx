@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Facebook, Youtube, Instagram, Linkedin, Globe, ChevronRight, Loader2, Mail, Languages, ArrowLeft, Spade, Shovel, Droplets, Info, Leaf, Waves } from 'lucide-react';
-import { CATEGORIES, TRANSLATIONS, CULTIVATION_GUIDES } from './constants';
-import { Language, Category, Crop, Product } from './types';
-import { getProductInsight } from './geminiService';
+import { CATEGORIES, TRANSLATIONS, CULTIVATION_GUIDES } from './constants.tsx';
+import { Language, Category, Crop, Product } from './types.ts';
+import { getProductInsight } from './geminiService.ts';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('en');

@@ -6,6 +6,10 @@
     <title>Himalaya Hybrid Seeds - Find Your Crop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        // Shim process.env for browser environments to prevent crashes
+        window.process = window.process || { env: {} };
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -38,6 +42,6 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
