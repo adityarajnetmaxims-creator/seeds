@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
-  Menu, X, MapPin, Phone, Facebook, Youtube, Instagram, Linkedin, 
-  Globe, ChevronRight, Loader2, Mail, Languages, ArrowLeft, Spade, 
-  Shovel, Droplets, Info, Leaf, BookOpen, Search, Sprout, LayoutGrid, 
-  ChevronLeft, Boxes
+  Menu, X, MapPin, Phone, ChevronRight, Loader2, Mail, Languages, 
+  ArrowLeft, Spade, Shovel, Droplets, Info, Leaf, BookOpen, 
+  Sprout, LayoutGrid, ChevronLeft, Globe
 } from 'lucide-react';
 import { CATEGORIES, TRANSLATIONS, CULTIVATION_GUIDES } from './constants.tsx';
 import { Language, Category, Crop, Product } from './types.ts';
@@ -223,7 +222,7 @@ const App: React.FC = () => {
                   </div>
                 )}
 
-                {/* STEP 2: Select Crop with Realistic Images */}
+                {/* STEP 2: Select Crop */}
                 {step === 'crop' && (
                   <div className="animate-slide-up">
                     <div className="flex items-center justify-between mb-8">
@@ -380,7 +379,7 @@ const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="bg-[#2d5a27] text-white py-20 px-6 mt-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
             <h2 className="text-3xl font-bold mb-10 uppercase tracking-tighter text-[#8cc63f]">{t.contactUs}</h2>
             <div className="space-y-8">
@@ -396,19 +395,12 @@ const App: React.FC = () => {
             <FooterLink onClick={() => {}}>My Catalog</FooterLink>
             <FooterLink onClick={() => {}}>{t.aboutUs}</FooterLink>
           </div>
+        </div>
 
-          <div className="flex flex-col items-center md:items-start">
-            <h4 className="text-white opacity-40 text-xs mb-6 font-bold uppercase tracking-widest">Connect With Us</h4>
-            <div className="flex gap-5 mb-10">
-               <SocialIcon><Facebook size={24} /></SocialIcon>
-               <SocialIcon><Youtube size={24} /></SocialIcon>
-               <SocialIcon><Instagram size={24} /></SocialIcon>
-               <SocialIcon><Linkedin size={24} /></SocialIcon>
-            </div>
-            <p className="font-sans text-xs text-center md:text-left mb-4 opacity-50 uppercase tracking-widest">{t.allRightsReserved}</p>
-            <div className="text-[#8cc63f]/40 text-[10px] font-bold tracking-[0.3em] uppercase">
-              HIMALAYA™ HYBRID SEEDS
-            </div>
+        <div className="max-w-6xl mx-auto border-t border-white/10 pt-10 flex flex-col items-center">
+          <p className="font-sans text-xs text-center mb-4 opacity-50 uppercase tracking-widest">{t.allRightsReserved}</p>
+          <div className="text-[#8cc63f]/40 text-[10px] font-bold tracking-[0.3em] uppercase">
+            HIMALAYA™ HYBRID SEEDS
           </div>
         </div>
       </footer>
@@ -449,12 +441,6 @@ const FooterLink: React.FC<{ children: React.ReactNode, onClick: () => void }> =
   <button onClick={onClick} className="block text-left hover:text-white transition-all text-xl font-light">
     {children}
   </button>
-);
-
-const SocialIcon: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <a href="#" className="p-4 bg-white/5 rounded-2xl hover:bg-[#8cc63f] hover:text-[#2d5a27] transition-all border border-white/10 shadow-lg">
-    {children}
-  </a>
 );
 
 export default App;
